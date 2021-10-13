@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="contact page of Atari">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="noindex, nofollow">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Contact - Atari</title>
+    <!-- FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&family=Oswald:wght@400;700&family=Playfair+Display:wght@400;700&display=swap"
+        rel="stylesheet">
+    <!-- CSS -->
+    <link rel="stylesheet" href="./CSS/contact-style.css">
+    <!-- JS -->
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script src="./js/index-js.js"></script>
+</head>
+<body>
+    <!-- header -->
+    <header id="navigation" class="nav-area"></header>
+    <main>
+        <!-- information  -->
+        <div class="info">
+            <div>
+                <i class="fa fa-map-marker"></i>
+                <p><b>Address:</b> Atari US Headquarters 475 Park Avenue South New York, NY 10016</p>
+            </div>
+            <div>
+                <i class="fa fa-phone"></i>
+                <p><b>Phone:</b> +1 (425) 398-3063</p>
+            </div>
+            <div>
+                <i class="fa fa-paper-plane"></i>
+                <p><b>Email:</b><a href="mailto:support@atari.com" target="_blank"> support@atari.com</a></p>
+            </div>
+            <div>
+                <i class="fa fa-globe"></i>
+                <p><b>Website:</b><a href="https://www.atari.com/" target="_blank"> www.atari.com/</a></p>
+            </div>
+        </div>
+        <!-- form -->
+        <div id="container">
+            <h1>&bull; Contact Us &bull;</h1>
+            <div class="underline"></div>
+            <form action="#some.php" method="post" id="contact-form">
+                <div class="name">
+                    <!-- I got an error about the label tag when i was validating the html file saying " The value of the 'for' attribute of the label element must be the ID of a non-hidden form control."
+                    In my form I didn't want to label my informations such as name, phone, email so on.
+                    I wanted the placeholder to be shown only. That's why i commented the labels to remove the errors -->
+                    <!-- <label for="name"></label> -->
+                    <input type="text" placeholder="My name is " name="name" id="name_input" required >
+                </div>
+                <div class="email">
+                    <!-- <label for="email"></label> -->
+                    <input type="email" placeholder="My e-mail is" name="email" id="email_input" required>
+                </div>
+                <div class="phone">
+                    <!-- <label for="phone"></label> -->
+                    <input type="tel" placeholder="My number is" name="phone" id="phone_input" pattern="[0-9]{3} [0-9]{2} [0-9]{3}" required>
+                </div>
+                <div class="subject">
+                    <!-- <label for="subject"></label> -->
+                    <input type="text" placeholder="Subject line" name="subject" id="subject_input" required>
+                </div>
+                <div class="message">
+                    <!-- <label for="message"></label> -->
+                    <textarea placeholder="Please type your message here..." name="message" id="message_input" cols="30" rows="7" required></textarea>
+                </div>
+                <div>
+                    <button class="submit">SEND MESSAGE</button>
+                </div>
+            </form>
+        </div>
+    </main>
+    <!-- footer -->
+    <footer id="footer"></footer>
+</body>
+</html>

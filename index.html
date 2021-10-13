@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="home page of Atari">
+    <meta name="viewport" content="width=device-width, initial-scale=1" >
+    <meta name="robots" content="noindex, nofollow">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Home - Atari</title>
+    <!-- FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&family=Oswald:wght@400;700&family=Playfair+Display:wght@400;700&display=swap"
+        rel="stylesheet">
+    <!-- CSS -->
+    <link rel="stylesheet" href="./CSS/index-style.css">
+    <!-- JS -->
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script src="./js/index-js.js"></script>
+</head>
+
+<body>
+    <!-- header -->
+    <header id="navigation" class="nav-area"></header>
+    <!-- main -->
+    <main>
+        <!-- row-1 -->
+        <section class="row-1">
+            <div class="img">
+                <img src="./image/image-1.jpeg" alt="image-1">
+            </div>
+            <div>
+                <p>Atari (/əˈtɑːri/) is a brand name owned by several entities since its inception in 1972, currently by
+                    French publisher Atari SA, through a subsidiary named Atari Interactive. The original
+                    Atari, Inc., founded in Sunnyvale, California, in 1972 by Nolan Bushnell and Ted Dabney, was a
+                    pioneer in arcade games, home video game consoles, and home computers. The company's products, such
+                    as Pong and the Atari 2600, helped define the electronic entertainment industry from the 1970s to
+                    the mid-1980s.</p>
+
+                <p> 1984, as a result of the video game crash of 1983, the home console and computer divisions of the
+                    original Atari Inc. were sold off, and the company was renamed Atari Games Inc.[4] Atari Games
+                    received the rights to use the logo and brand name with appended text "Games" on arcade games, as
+                    well as rights to the original 1972–1984 arcade hardware properties. The Atari Consumer Electronics
+                    Division properties were in turn sold to Jack Tramiel's Tramel Technology Ltd., which then renamed
+                    itself to Atari Corporation. In 1996, Atari Corporation reverse-merged with disk-drive
+                    manufacturer JT Storage (JTS), becoming a division within the company. In 1998, Hasbro
+                    Interactive acquired all Atari Corporation related properties from JTS, creating a new
+                    subsidiary, Atari Interactive.</p>
+            </div>
+        </section>
+        <!-- row-2 -->
+        <section class="row-2">
+            <div>
+                <img src="./image/image-2.jpg" alt="image-2">
+            </div>
+            <div>
+                <p>
+                    The Atari 2600, branded as the Atari Video Computer System (Atari VCS) until November 1982, is a
+                    home video game console developed and produced by Atari, Inc. Released in September 1977, it
+                    popularized the use of microprocessor-based hardware and of games stored on swappable ROM
+                    cartridges, a format first used with the Fairchild Channel F in 1976. The VCS was bundled with two
+                    joystick controllers, a conjoined pair of paddle controllers, and a game cartridge—initially
+                    Combat[4] and later Pac-Man.
+                </p>
+            </div>
+        </section>
+        <!-- video -->
+        <section class="video">
+            <div>
+                <h1>The First Atari Game</h1>
+            </div>
+            <div>
+                <video autoplay muted loop>
+                    <source src="./video/videoplayback.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+        </section>
+        <!-- slide images -->
+        <section class="slider-container">
+            <div class="slideshow-container">
+                <div class="mySlides1">
+                    <img src="./image/1image.jpeg" alt="1-image">
+                </div>
+                <div class="mySlides1">
+                    <img src="./image/2image.jpeg" alt="2-image">
+                </div>
+                <div class="mySlides1">
+                    <img src="./image/3image.jpeg" alt="3-image">
+                </div>
+                <div class="mySlides1">
+                    <img src="./image/4image.jpeg" alt="4-image">
+                </div>
+                <div class="mySlides1">
+                    <img src="./image/5image.jpg" alt="5-image">
+                </div>
+                <div class="mySlides1">
+                    <img src="./image/6image.jpeg" alt="6-image">
+                </div>
+                <div class="mySlides1">
+                    <img src="./image/7image.jpeg" alt="7-image">
+                </div>
+                <div class="mySlides1">
+                    <img src="./image/8image.jpg" alt="8-image">
+                </div>
+                <div class="mySlides1">
+                    <img src="./image/9image.jpg" alt="9-image">
+                </div>
+                <a class="prev" onclick="plusSlides(-1,0)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1,0)">&#10095;</a>
+            </div>
+        </section>
+    </main>
+    <!-- footer -->
+    <footer id="footer"></footer>
+    <!-- javaScript for slides -->
+    <!-- The reason i wrote the scipt code there is that when i wrote it in index-js.js file and when i refresh the page the first time the arrows was on the page onyl, the first photo wasn' displayed.
+        when you click the arrow the photos was changing but when i wrote the code here both the first photo and arrows were displayed and when you click the arrows photos were changing. the code was working properly, that's why i wrote the code here  -->
+    <script>
+        var slideIndex = [1,1];
+        var slideId = ["mySlides1"]; 
+        showSlides(1,0);
+        showSlides(1,1);
+    
+    
+        function plusSlides(n, no){
+            showSlides(slideIndex[no] += n, no);
+        }
+    
+        function showSlides(n, no){
+            var i;
+            var x = document.getElementsByClassName(slideId[no]);
+            if(n > x.length) {slideIndex[no] = 1}
+            if(n < 1) {slideIndex[no] = x.length}
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+            x[slideIndex[no]-1].style.display = "block";
+        }
+    </script>
+</body>
+
+
+</html>
